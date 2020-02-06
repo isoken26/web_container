@@ -3,10 +3,10 @@ FROM node:latest
 WORKDIR /usr/src/app
 
 COPY ./package.json .
-COPY ./package-lock.json ./package-lock.josn
+COPY ./yarn.lock ./yarn.lock
 COPY ./public/ ./public/
 COPY ./src/ ./src/
 
-RUN npm install
+RUN yarn install
 
-CMD ["npm", "start"]
+CMD ["yarn", "start"]
