@@ -21,7 +21,7 @@ jobs:
 
     - name: Build base image
       run: |
-        docker build . -t isoken26/web_container:latest 
+        docker build . -t ${DOCKERE_HUB_BASE_NAME}:${TAG_NAME}
 
     - name: Login to Registrie
       env:
