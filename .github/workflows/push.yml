@@ -19,13 +19,9 @@ jobs:
       with:
         fetch-depth: 1
 
-    - name: Set env
-      run: |
-        echo "::set-env name=HUB_TAG::${DOCKER_HUB_BASE_NAME}:${TAG_NAME}"
-
     - name: Build base image
       run: |
-        docker build . -t "${DOCKER_HUB_BASE_NAME}${HUB_TAG}" 
+        docker build . -t "${DOCKER_HUB_BASE_NAME}:${TAG_NAME}" 
 
     - name: Login to Registrie
       env:
