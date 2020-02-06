@@ -25,7 +25,7 @@ jobs:
 
     - name: Build base image
       run: |
-        docker build . -t "${HUB_TAG}" 
+        docker build . -t "${DOCKER_HUB_BASE_NAME}${HUB_TAG}" 
 
     - name: Login to Registrie
       env:
