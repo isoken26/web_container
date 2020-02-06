@@ -30,4 +30,4 @@ jobs:
         echo "${DOCKER_HUB_TOKEN}" | docker login -u isoken26 --password-stdin
     
     - name: Push to Docker Hub
-      run: docker push "${HUB_TAG}"  
+      run: docker push isoken26/web_container:latest  
