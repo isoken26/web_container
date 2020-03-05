@@ -1,2 +1,2 @@
-import { } from './indexd.module.css'
+import './index.css'
 export { }
